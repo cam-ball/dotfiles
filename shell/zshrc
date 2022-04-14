@@ -1,0 +1,22 @@
+# Path to your oh-my-zsh installation.
+export ZSH=$HOME/.oh-my-zsh
+export CONFIG_LOCATION=$HOME/dotfiles
+export OVERRIDE_LOCATION=$HOME/overrides
+
+for conf in "${CONFIG_LOCATION}/shell/zshconfig/"*.zsh; do
+  source "${conf}"
+done
+
+# local, non-public overrides
+for conf in "${OVERRIDE_LOCATION}/"*.zsh; do
+  source "${conf}"
+done
+unset conf
+
+setopt APPEND_HISTORY
+
+plugins=(git colored-man-pages colorize jump bundler alias-finder)
+source $ZSH/oh-my-zsh.sh
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
