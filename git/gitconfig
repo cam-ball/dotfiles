@@ -7,7 +7,8 @@
 	name = laurenball
 	email = laurenb@pvep.com
 [alias]
-        sync = "!f() { branch=$(git symbolic-ref --short HEAD) && git fetch --all --prune && git pull upstream ${branch} && git push origin ${branch}; }; f" pr = "!f() { git fetch upstream refs/pull/$1/head:pr/$1 && git checkout pr/$1; }; f"
+        sync = "!f() { branch=$(git symbolic-ref --short HEAD) && git fetch --all --prune && git pull upstream ${branch} && git push origin ${branch}; }; f" 
+        pr = "!f() { git fetch upstream refs/pull/$1/head:pr/$1 && git checkout pr/$1; }; f"
         pr-clean = "!git for-each-ref refs/heads/pr/* --format='%(refname)' | while read ref; do branch=${ref#refs/heads/}; git branch -D $branch; done"
         recent = "!git for-each-ref --sort='''authordate:iso8601''' --format=''' %(authordate:relative)%09%(refname:short)''' refs/heads"
 [push]
