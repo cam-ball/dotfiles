@@ -2,7 +2,7 @@
 function rspec_n() {
   if [[ $1 -gt 1 && "$2" != "" ]]
   then 
-    for i in {1..$1}; do be rspec "$2"; done
+    for i in {1..$1}; do bundle exec rspec $2; done
   else
     echo 'Make sure first argument is a num greater than 1 and second is a string'
   fi
