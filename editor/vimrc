@@ -103,8 +103,12 @@ let g:NERDSpaceDelims = 1
 " delimitmate disable <> matching for html to avoid conflicting with close-tag
 au FileType html let b:delimitMate_matchpairs = "(:),[:],{:}"
 
-" Tell Vim to tream Jenkinsfile as Groovy script
+" Tell Vim to treat Jenkinsfile as Groovy script
 au BufNewFile,BufRead Jenkinsfile setf groovy
+
+" Turn on spellcheck for markdown and gitcommit files
+au BufNewFile,BufRead *.md setlocal spell
+au FileType gitcommit setlocal spell
 
 " fzf shortcuts
 " stolen from https://rietta.com/blog/hide-gitignored-files-fzf-vim/
