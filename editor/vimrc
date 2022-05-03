@@ -76,7 +76,7 @@ noremap <Leader>P :let @+=expand("%:p")<CR>
 " set increment to include alpha characters
 set nrformats+=alpha
 
-" Remap escape
+" Remap escape from insert mode
 imap jj <Esc>
 
 " Clear search highlighting
