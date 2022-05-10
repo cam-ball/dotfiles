@@ -123,6 +123,10 @@ let g:airline_theme='gruvbox'
 "remove trailing whitespace
 autocmd BufWritePre *.rb :%s/\s\+$//e
 
+" VimTrick to close all open buffers except current
+" https://www.getrevue.co/profile/vim_tricks/issues/closing-hidden-buffers-1171538
+command Bd :up | %bd | e#
+
 " #################################################
 " #                 ALE settings                  #
 " #################################################
