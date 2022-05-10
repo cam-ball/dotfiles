@@ -203,7 +203,6 @@ nmap <silent> <Leader>d <Plug>(ale_detail)
 nmap <silent> <Leader>L <Plug>(ale_toggle)
 " strict mode: use more linters
 nmap <silent> <Leader>S :call StrictLintToggle()<CR>
-
 nmap <silent> <leader>an :ALENext<cr>
 nmap <silent> <leader>aN :ALEPrevious<cr>
 
