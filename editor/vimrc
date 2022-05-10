@@ -89,7 +89,7 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 " fzf view
-let g:fzf_layout = { 'down': '~20%' }
+let g:fzf_layout = { 'down': '~30%' }
 " Ack formatting
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
@@ -252,6 +252,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'dense-analysis/ale'
   Plug 'terryma/vim-expand-region'
   Plug 'godlygeek/tabular'
+  Plug 'izzergh/rumpelstiltskin'
 call plug#end()
 
 " autocmd vimenter * ++nested 
