@@ -256,6 +256,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'terryma/vim-expand-region'
   Plug 'godlygeek/tabular'
   Plug 'izzergh/rumpelstiltskin'
+  Plug 'rsrchboy/vim-textobj-heredocs'
 call plug#end()
 
 " autocmd vimenter * ++nested 
