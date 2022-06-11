@@ -106,8 +106,9 @@ au FileType html let b:delimitMate_matchpairs = "(:),[:],{:}"
 " Tell Vim to treat Jenkinsfile as Groovy script
 au BufNewFile,BufRead Jenkinsfile setf groovy
 
-" Turn on spellcheck for markdown and gitcommit files
+" Turn on spellcheck
 au BufNewFile,BufRead *.md setlocal spell
+au BufNewFile,BufRead *.yml setlocal spell
 au FileType gitcommit setlocal spell
 
 " fzf shortcuts
