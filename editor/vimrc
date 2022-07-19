@@ -95,6 +95,7 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 
 " Open NERD tree
 map <C-d> :NERDTreeToggle<CR>
+nnoremap <Leader>f :NERDTreeFind<CR>
 
 " NERD Commenter settings
 " Adds a space after comment insertion
