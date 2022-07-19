@@ -61,5 +61,5 @@ mouse:
   # If this is `true`, the cursor is temporarily hidden when typing.
   hide_when_typing: true
 
-key_bindings:
-  - { key: Q, mods: Control, action: Quit }
+# key_bindings:
+  # - { key: Q, mods: Control, action: Quit }
