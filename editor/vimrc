@@ -80,7 +80,7 @@ set nrformats+=alpha
 imap jj <Esc>
 
 " Clear search highlighting
-map <C-m> :noh<CR>
+nnoremap <Leader>m :noh<CR>
 
 " Better split swapping
 nnoremap <C-J> <C-W><C-J>
