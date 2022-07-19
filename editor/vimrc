@@ -268,3 +268,6 @@ call plug#end()
 colorscheme gruvbox
 hi Normal guibg=NONE ctermbg=NONE
 hi clear SignColumn
+
+nnoremap <leader>ev :vsplit $HOME/.vimrc<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
