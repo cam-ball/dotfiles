@@ -261,6 +261,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'godlygeek/tabular'
   Plug 'izzergh/rumpelstiltskin'
   Plug 'rsrchboy/vim-textobj-heredocs'
+  Plug 'ap/vim-css-color'
 call plug#end()
 
 " autocmd vimenter * ++nested 
