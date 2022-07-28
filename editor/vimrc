@@ -174,7 +174,7 @@ let s:default_linters =
     \{
     \   'ruby': ['rubocop', 'ruby'],
     \}
-let g:ale_fixers = { 'ruby': ['rubocop'] }
+let g:ale_fixers = { 'ruby': ['rubocop'], 'javascript': ['prettier'] }
 noremap <Leader>fix :ALEFix<CR>
 
 let s:strict_linters =
