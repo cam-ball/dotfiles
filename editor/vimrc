@@ -125,6 +125,7 @@ au FileType gitcommit setlocal spell
 " else use regular :Files
 nnoremap <expr> <Leader>t (len(system('git rev-parse')) ? ':Files' : ':GFiles --exclude-standard --others --cached')."\<CR>"
 map <Leader>l :Commits<CR>
+map <Leader>b :Buffers<CR>
 
 let g:airline_theme='gruvbox'
 
