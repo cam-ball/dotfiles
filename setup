@@ -9,24 +9,39 @@ olddir=~/dotfiles_old                     # old dotfiles backup directory
 dotfile_dirs="shell git editor terminal"  # directories containing dotfiles to link to $HOME
 home_bin=$HOME/bin                        # directory for executables stored in this repository
 
-# create dotfiles_old in homedir
-mkdir -p $olddir
+while getopts "x" option; do
+  case ${option} in
+    x )
+      script_only=1
+      ;;
+    \? ) #For invalid option
+      echo "Invalid argument provided"
+      exit 1
+      ;;
+  esac
+done
 
 # change to the dotfiles directory
 cd $dir
 
-# move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks
-for dotfile_dir in $dotfile_dirs; do
-  for file in $dir/$dotfile_dir/*; do
-    if [ -f "$file" ]; then
-      basename=$(basename "$file")
-      mv $HOME/.$basename $olddir
-      ln -s $file $HOME/.$basename
-    fi
-  done
-done
+# only execute if the $script_only variable is not set
+if [ -z "${script_only+x}" ]; then
+  # move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks
 
-echo "Complete. Moved all existing dotfiles to $olddir."
+  # create dotfiles_old in homedir
+  mkdir -p $olddir
+  for dotfile_dir in $dotfile_dirs; do
+    for file in $dir/$dotfile_dir/*; do
+      if [ -f "$file" ]; then
+        basename=$(basename "$file")
+        mv $HOME/.$basename $olddir
+        ln -s $file $HOME/.$basename
+      fi
+    done
+  done
+
+  echo "Moved all existing dotfiles to $olddir."
+fi
 
 # Move files in scripts folder to /bin in $HOME
 mkdir -p $home_bin
@@ -34,6 +49,8 @@ mkdir -p $home_bin
 for file in $dir/scripts/*; do
   if [ -f "$file" ]; then
     scriptname=$(basename "$file")
-    ln -s $file $home_bin/$scriptname
+    ln -s -f $file $home_bin/$scriptname
   fi
 done
+
+echo "Complete"
