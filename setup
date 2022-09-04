@@ -1,14 +1,13 @@
 #!/bin/bash
 ############################
-# .make.sh This script creates symlinks from the home directory to any desired
-# dotfiles in ~/dotfiles
+# This script creates symlinks from the home directory to any desired dotfiles
+# in ~/dotfiles
 ############################
 
-########## Variables
-
-dir=~/dotfiles                    # dotfiles directory
-olddir=~/dotfiles_old             # old dotfiles backup directory
-dotfile_dirs="shell git editor terminal"
+dir=~/dotfiles                            # dotfiles directory
+olddir=~/dotfiles_old                     # old dotfiles backup directory
+dotfile_dirs="shell git editor terminal"  # directories containing dotfiles to link to $HOME
+home_bin=$HOME/bin                        # directory for executables stored in this repository
 
 # create dotfiles_old in homedir
 mkdir -p $olddir
@@ -21,9 +20,8 @@ for dotfile_dir in $dotfile_dirs; do
   for file in $dir/$dotfile_dir/*; do
     if [ -f "$file" ]; then
       basename=$(basename "$file")
-      dirname=$(dirname "$file")
-      mv ~/.$basename $olddir
-      ln -s $file ~/.$basename
+      mv $HOME/.$basename $olddir
+      ln -s $file $HOME/.$basename
     fi
   done
 done
@@ -31,7 +29,6 @@ done
 echo "Complete. Moved all existing dotfiles to $olddir."
 
 # Move files in scripts folder to /bin in $HOME
-home_bin=$HOME/bin
 mkdir -p $home_bin
 
 for file in $dir/scripts/*; do
