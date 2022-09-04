@@ -1,0 +1,6 @@
+#!/bin/zsh
+
+# Wrapper for opening Obsidian with synced backup
+$SHELL $HOME/bin/sync_obsidian
+
+$HOME/bin/obsidian.AppImage

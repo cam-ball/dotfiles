@@ -29,3 +29,14 @@ for dotfile_dir in $dotfile_dirs; do
 done
 
 echo "Complete. Moved all existing dotfiles to $olddir."
+
+# Move files in scripts folder to /bin in $HOME
+home_bin=$HOME/bin
+mkdir -p $home_bin
+
+for file in $dir/scripts/*; do
+  if [ -f "$file" ]; then
+    scriptname=$(basename "$file")
+    ln -s $file $home_bin/$scriptname
+  fi
+done

@@ -1,0 +1,13 @@
+#!/bin/zsh
+
+# Sync Obsidian repository with git
+VAULT_PATH="$HOME/Documents/mind-palace"
+cd "$VAULT_PATH"
+
+git pull -q
+
+if [ "$(git status --porcelain | wc -l)" -ne 0 ]; then
+  git add .
+  git commit -q -m "Latest: $(date +"%D %l:%M%p %Z")"
+  git push -q
+fi
