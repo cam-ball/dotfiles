@@ -220,7 +220,7 @@ nmap <silent> <leader>aN :ALEPrevious<cr>
 " #################################################
 
 call plug#begin('~/.vim/plugged')
-  " traversal
+  " file management and movement
   Plug 'scrooloose/nerdtree'
   Plug 'mileszs/ack.vim'
   Plug 'christoomey/vim-tmux-navigator'
@@ -246,10 +246,14 @@ call plug#begin('~/.vim/plugged')
   Plug 'petrbroz/vim-glsl'
   Plug 'alvan/vim-closetag'
 
-  " UI
+  " appearance
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
   Plug 'morhetz/gruvbox'
+  Plug 'ap/vim-css-color'
+  Plug 'mechatroner/rainbow_csv'
+
+  " usability
   Plug 'Raimondi/delimitMate'
   Plug 'terryma/vim-multiple-cursors'
   Plug 'ervandew/supertab'
@@ -266,8 +270,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'godlygeek/tabular'
   Plug 'izzergh/rumpelstiltskin'
   Plug 'rsrchboy/vim-textobj-heredocs'
-  Plug 'ap/vim-css-color'
-  Plug 'mechatroner/rainbow_csv'
 call plug#end()
 
 " autocmd vimenter * ++nested 
