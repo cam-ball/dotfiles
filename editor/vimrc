@@ -94,11 +94,9 @@ let g:fzf_layout = { 'down': '~30%' }
 " Ack formatting
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
-" Open NERD tree
-map <C-d> :NERDTreeToggle<CR>
-nnoremap <Leader>f :NERDTreeFind<CR>
-" show hidden files by default
-let g:NERDTreeShowHidden=1
+" Open Fern
+ map <C-d> :Fern . -drawer -toggle<CR>
+ nnoremap <Leader>r :Fern . -drawer -reveal=%<CR>
 
  " NERD Commenter settings
  " Adds a space after comment insertion
@@ -221,7 +219,7 @@ nmap <silent> <leader>aN :ALEPrevious<cr>
 
 call plug#begin('~/.vim/plugged')
   " file management and movement
-  Plug 'scrooloose/nerdtree'
+  Plug 'lambdalisue/fern.vim'
   Plug 'mileszs/ack.vim'
   Plug 'christoomey/vim-tmux-navigator'
   Plug 'junegunn/fzf'
