@@ -100,9 +100,9 @@ nnoremap <Leader>f :NERDTreeFind<CR>
 " show hidden files by default
 let g:NERDTreeShowHidden=1
 
-" NERD Commenter settings
-" Adds a space after comment insertion
-let g:NERDSpaceDelims = 1
+ " NERD Commenter settings
+ " Adds a space after comment insertion
+ let g:NERDSpaceDelims = 1
 
 " delimitmate disable <> matching for html to avoid conflicting with close-tag
 au FileType html let b:delimitMate_matchpairs = "(:),[:],{:}"
