@@ -220,6 +220,8 @@ nmap <silent> <leader>aN :ALEPrevious<cr>
 call plug#begin('~/.vim/plugged')
   " file management and movement
   Plug 'lambdalisue/fern.vim'
+  Plug 'lambdalisue/fern-git-status.vim'
+  Plug 'lambdalisue/fern-mapping-quickfix.vim'
   Plug 'mileszs/ack.vim'
   Plug 'christoomey/vim-tmux-navigator'
   Plug 'junegunn/fzf'
