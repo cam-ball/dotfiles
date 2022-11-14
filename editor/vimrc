@@ -77,6 +77,7 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 
 " abbreviations
 iabbrev recieve receive
+iabbrev github GitHub
 
 " Remap integer increment (conflicted with tmux overwrite)
 " noremap <C-b> <C-a>
