@@ -245,6 +245,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'pangloss/vim-javascript'
   Plug 'petrbroz/vim-glsl'
   Plug 'alvan/vim-closetag'
+  Plug 'mattn/emmet-vim'
 
   " appearance
   Plug 'vim-airline/vim-airline'
