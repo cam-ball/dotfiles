@@ -45,6 +45,9 @@ if [ -z "${script_only+x}" ]; then
   mkdir -p $nvim_config
   ln -s -f $dir/editor/vimrc $nvim_config/init.vim
 
+  # symlink spellfile dir
+  ln -s -f $dir/editor/spell $nvim_config
+
   echo "Moved all existing dotfiles to $olddir."
 fi
 
