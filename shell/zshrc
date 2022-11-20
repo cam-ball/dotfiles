@@ -8,9 +8,11 @@ for conf in "${CONFIG_LOCATION}/shell/zshconfig/"*.zsh; do
 done
 
 # local, non-public overrides
-for conf in "${OVERRIDE_LOCATION}/"*.zsh; do
-  source "${conf}"
-done
+if [ -d "${OVERRIDE_LOCATION}/" ] ; then
+  for conf in "${OVERRIDE_LOCATION}/"*.zsh; do
+    source "${conf}"
+  done
+fi
 unset conf
 
 setopt APPEND_HISTORY
