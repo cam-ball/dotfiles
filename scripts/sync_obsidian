@@ -8,6 +8,6 @@ git pull -q
 
 if [ "$(git status --porcelain | wc -l)" -ne 0 ]; then
   git add .
-  git commit -q -m "Latest: $(date +"%D %l:%M%p %Z")"
+  git commit -q -m "Latest: $(date +"%D %l:%M%p %Z") from $(hostname)"
   git push -q
 fi
