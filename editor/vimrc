@@ -171,7 +171,19 @@ let s:default_linters =
     \{
     \   'ruby': ['rubocop', 'ruby'],
     \}
-let g:ale_fixers = { 'ruby': ['rubocop'], 'javascript': ['prettier'] }
+
+let js_fixers = ['prettier', 'eslint']
+let g:ale_fixers = {
+    \   'ruby': ['rubocop'],
+    \   'javascript': js_fixers,
+    \   'javascript.jsx': js_fixers,
+    \   'typescript': js_fixers,
+    \   'typescriptreact': js_fixers,
+    \   'css': ['prettier'],
+    \   'json': ['prettier'],
+    \   'yaml': ['prettier'],
+    \   'yml': ['prettier'],
+    \}
 noremap <Leader>lint :ALELint<CR>
 noremap <Leader>fix :ALEFix<CR>
 
