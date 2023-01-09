@@ -1,11 +1,10 @@
 [core]
-	excludesfile = /Users/laurenball/.gitignore
 	editor = nvim
 [color]
 	ui = true
 [user]
 	name = cam-ball
-	email = cameronb@pvep.com
+	email = hi@camball.me
 [alias]
         sync = "!f() { branch=$(git symbolic-ref --short HEAD) && git fetch --all --prune && git pull upstream ${branch} && git push origin ${branch}; }; f" 
         pr = "!f() { git fetch upstream refs/pull/$1/head:pr/$1 && git checkout pr/$1; }; f"
