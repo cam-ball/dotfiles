@@ -96,8 +96,7 @@ let g:fzf_layout = { 'down': '~30%' }
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
 " Open Fern
- map <C-d> :Fern . -drawer -toggle<CR>
- nnoremap <Leader>r :Fern . -drawer -reveal=%<CR>
+ map <C-d> :Lexplore<CR>
 
  " NERD Commenter settings
  " Adds a space after comment insertion
@@ -138,6 +137,8 @@ command Bd :up | %bd | e#
 " `:h ale-options` for details
 let g:ale_enabled = 1
 
+let g:ale_fix_on_save = 1
+
 " remove ALE gutter background color
 highlight clear ALEErrorSign
 highlight clear ALEWarningSign
@@ -170,6 +171,7 @@ let g:ale_loclist_msg_format =
 let s:default_linters =
     \{
     \   'ruby': ['rubocop', 'ruby'],
+    \   'markdown': ['write-good'],
     \}
 
 let js_fixers = ['prettier', 'eslint']
@@ -232,13 +234,11 @@ nmap <silent> <leader>aN :ALEPrevious<cr>
 
 call plug#begin('~/.vim/plugged')
   " file management and movement
-  Plug 'lambdalisue/fern.vim'
-  Plug 'lambdalisue/fern-git-status.vim'
-  Plug 'lambdalisue/fern-mapping-quickfix.vim'
   Plug 'mileszs/ack.vim'
   Plug 'christoomey/vim-tmux-navigator'
   Plug 'junegunn/fzf'
   Plug 'junegunn/fzf.vim'
+  Plug 'tpope/vim-vinegar'
 
   " git
   Plug 'tpope/vim-fugitive'
