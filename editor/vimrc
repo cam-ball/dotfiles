@@ -130,6 +130,14 @@ autocmd BufWritePre *.rb :%s/\s\+$//e
 " https://www.getrevue.co/profile/vim_tricks/issues/closing-hidden-buffers-1171538
 command Bd :up | %bd | e#
 
+" vim-test shortcuts
+" run tests in current buffer. If there are no tests, run last test again
+nmap <silent> <leader>T :TestFile<CR>
+" run last test
+nmap <silent> <leader>Tl :TestLast<CR>
+" open last test run & run again
+nmap <silent> <leader>Tv :TestVisit<CR>
+
 " #################################################
 " #                 ALE settings                  #
 " #################################################
@@ -249,6 +257,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-eunuch'
   Plug 'tpope/vim-surround'
   Plug 'tpope/vim-unimpaired'
+  Plug 'vim-test/vim-test'
 call plug#end()
 
 " autocmd vimenter * ++nested 
