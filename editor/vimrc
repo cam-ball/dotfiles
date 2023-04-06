@@ -234,56 +234,56 @@ nmap <silent> <leader>aN :ALEPrevious<cr>
 
 call plug#begin('~/.vim/plugged')
   " file management and movement
-  Plug 'mileszs/ack.vim'
   Plug 'christoomey/vim-tmux-navigator'
   Plug 'junegunn/fzf'
   Plug 'junegunn/fzf.vim'
+  Plug 'mileszs/ack.vim'
   Plug 'tpope/vim-vinegar'
 
   " git
+  Plug 'airblade/vim-gitgutter'
+  Plug 'rbong/vim-flog'
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-rhubarb'
-  Plug 'rbong/vim-flog'
-  Plug 'airblade/vim-gitgutter'
 
   " ruby
-  Plug 'vim-ruby/vim-ruby'
-  Plug 'tpope/vim-rails'
-  Plug 'tpope/vim-bundler'
   Plug 'joker1007/vim-ruby-heredoc-syntax'
   Plug 'kana/vim-textobj-user'
   Plug 'nelstrom/vim-textobj-rubyblock'
+  Plug 'tpope/vim-bundler'
+  Plug 'tpope/vim-rails'
+  Plug 'vim-ruby/vim-ruby'
 
   " js/frontend
-  Plug 'pangloss/vim-javascript'
-  Plug 'petrbroz/vim-glsl'
   Plug 'alvan/vim-closetag'
   Plug 'mattn/emmet-vim'
+  Plug 'pangloss/vim-javascript'
+  Plug 'petrbroz/vim-glsl'
 
   " appearance
-  Plug 'vim-airline/vim-airline'
-  Plug 'vim-airline/vim-airline-themes'
-  Plug 'morhetz/gruvbox'
   Plug 'ap/vim-css-color'
   Plug 'mechatroner/rainbow_csv'
+  Plug 'morhetz/gruvbox'
+  Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
 
   " usability
-  Plug 'Raimondi/delimitMate'
-  Plug 'terryma/vim-multiple-cursors'
-  Plug 'ervandew/supertab'
-  Plug 'tpope/vim-surround'
-  Plug 'tpope/vim-eunuch'
-  Plug 'tpope/vim-abolish'
-  Plug 'tpope/vim-unimpaired'
   Plug 'AndrewRadev/splitjoin.vim'
-  Plug 'preservim/nerdcommenter'
-  Plug 'editorconfig/editorconfig-vim'
-  Plug 'tpope/vim-endwise'
+  Plug 'Raimondi/delimitMate'
   Plug 'dense-analysis/ale'
-  Plug 'terryma/vim-expand-region'
+  Plug 'editorconfig/editorconfig-vim'
+  Plug 'ervandew/supertab'
   Plug 'godlygeek/tabular'
   Plug 'izzergh/rumpelstiltskin'
+  Plug 'preservim/nerdcommenter'
   Plug 'rsrchboy/vim-textobj-heredocs'
+  Plug 'terryma/vim-expand-region'
+  Plug 'terryma/vim-multiple-cursors'
+  Plug 'tpope/vim-abolish'
+  Plug 'tpope/vim-endwise'
+  Plug 'tpope/vim-eunuch'
+  Plug 'tpope/vim-surround'
+  Plug 'tpope/vim-unimpaired'
 call plug#end()
 
 " autocmd vimenter * ++nested 
