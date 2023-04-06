@@ -88,7 +88,7 @@ set nrformats+=alpha
 imap jj <Esc>
 
 " Clear search highlighting
-nnoremap <Leader>m :noh<CR>
+nnoremap <Leader>c :noh<CR>
 
 " fzf view
 let g:fzf_layout = { 'down': '~30%' }
@@ -119,7 +119,6 @@ au FileType gitcommit setlocal spell
 " If in git directory, show only files that are committed, staged, or unstaged
 " else use regular :Files
 nnoremap <expr> <Leader>t (len(system('git rev-parse')) ? ':Files' : ':GFiles --exclude-standard --others --cached')."\<CR>"
-map <Leader>l :Commits<CR>
 map <Leader>b :Buffers<CR>
 
 let g:airline_theme='gruvbox'
@@ -186,47 +185,13 @@ let g:ale_fixers = {
     \   'yaml': ['prettier'],
     \   'yml': ['prettier'],
     \}
-noremap <Leader>lint :ALELint<CR>
-noremap <Leader>fix :ALEFix<CR>
 
-let s:strict_linters =
-    \ {
-    \   'ruby': [
-    \     'breakman',
-    \     'rails_best_practices',
-    \     'reek',
-    \     'rubocop',
-    \     'rufo',
-    \   ],
-    \ }
 let g:ale_linters = s:default_linters
 
-function! StrictLintToggle()
-  if exists('b:ale_linters')
-    unlet b:ale_linters
-    echo 'Linter: strict mode off'
-  else
-    let b:ale_linters = s:strict_linters
-    echo 'Linter: strict mode on'
-  endif
-endfunction
-
 " Individual linter options
-
 " ALE keybindings
-"   jump to next warning down, wrap if none below
-nmap <silent> <Leader>n <Plug>(ale_next_wrap)
-"   jump to next warning up, wrap if none up
-nmap <silent> <Leader>N <Plug>(ale_previous_wrap)
 "   show full message for current line
 nmap <silent> <Leader>d <Plug>(ale_detail)
-"   enable/disable ALE (includes buffer, statusline, gutter)
-"   (L for Linter)
-nmap <silent> <Leader>L <Plug>(ale_toggle)
-" strict mode: use more linters
-nmap <silent> <Leader>S :call StrictLintToggle()<CR>
-nmap <silent> <leader>an :ALENext<cr>
-nmap <silent> <leader>aN :ALEPrevious<cr>
 
 " #################################################
 " #             End ALE settings                  #
