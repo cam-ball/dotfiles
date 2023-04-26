@@ -138,6 +138,8 @@ nmap <silent> <leader>Tl :TestLast<CR>
 " open last test run & run again
 nmap <silent> <leader>Tv :TestVisit<CR>
 
+let test#strategy = 'neovim'
+
 " #################################################
 " #                 ALE settings                  #
 " #################################################
