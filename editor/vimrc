@@ -155,6 +155,9 @@ highlight clear ALEWarningSign
 " remove syntax highlighting
 let g:ale_set_highlights = 0
 
+" turn off error virtual text
+let g:ale_virtualtext_cursor = 'disabled'
+
 " set ALE warning/error symbols
 let g:ale_sign_error = '!!'
 let g:ale_sign_warning = '!'
