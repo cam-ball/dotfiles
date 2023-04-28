@@ -75,6 +75,12 @@ noremap <Leader>P :let @+=expand("%:p")<CR>
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
+" utilities for opening alt files (from vim-rails)
+nnoremap <leader>av :AV<cr>
+nnoremap <leader>as :AS<cr>
+nnoremap <leader>al :AT<cr>
+nnoremap <leader>a :A<cr>
+
 " abbreviations
 iabbrev recieve receive
 iabbrev github GitHub
