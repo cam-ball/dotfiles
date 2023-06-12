@@ -269,9 +269,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-surround'
   Plug 'tpope/vim-unimpaired'
   Plug 'vim-test/vim-test'
-
-  " copilot
-  Plug 'github/copilot.vim'
 call plug#end()
 
 " autocmd vimenter * ++nested 
