@@ -17,7 +17,7 @@ unset conf
 
 setopt APPEND_HISTORY
 
-plugins=(git colored-man-pages colorize jump bundler asdf)
+plugins=(git colored-man-pages colorize jump bundler)
 source $ZSH/oh-my-zsh.sh
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
