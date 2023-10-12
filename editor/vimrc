@@ -101,6 +101,7 @@ let g:fzf_layout = { 'down': '~30%' }
 " Ack formatting
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
+
 " Open Fern
  map <C-d> :Lexplore<CR>
 
