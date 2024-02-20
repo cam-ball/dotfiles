@@ -111,8 +111,9 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 " delimitmate disable <> matching for html to avoid conflicting with close-tag
 au FileType html let b:delimitMate_matchpairs = "(:),[:],{:}"
 
-" Tell Vim to treat Jenkinsfile as Groovy script
+" manual language overrides
 au BufNewFile,BufRead Jenkinsfile setf groovy
+au BufNewFile,BufRead Tiltfile* setf python
 
 " Turn on spellcheck
 au BufNewFile,BufRead *.md setlocal spell
