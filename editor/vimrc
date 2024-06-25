@@ -84,6 +84,8 @@ nnoremap <leader>a :A<cr>
 " abbreviations
 iabbrev recieve receive
 
+iabbrev cab@ Co-authored-by: NAME <NAME@example.com><Esc>BBciw
+
 " Remap integer increment (conflicted with tmux overwrite)
 " noremap <C-b> <C-a>
 " set increment to include alpha characters
