@@ -219,6 +219,11 @@ nmap <silent> <Leader>d <Plug>(ale_detail)
 " #################################################
 " #             End ALE settings                  #
 " #################################################
+"
+
+lua <<EOF
+  require('auto-dark-mode').setup()
+EOF
 
 call plug#begin('~/.vim/plugged')
   " file management and movement
@@ -254,6 +259,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'morhetz/gruvbox'
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
+  Plug 'f-person/auto-dark-mode.nvim'
 
   " usability
   Plug 'AndrewRadev/splitjoin.vim'
