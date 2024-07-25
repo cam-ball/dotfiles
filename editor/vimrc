@@ -221,10 +221,6 @@ nmap <silent> <Leader>d <Plug>(ale_detail)
 " #################################################
 "
 
-lua <<EOF
-  require('auto-dark-mode').setup()
-EOF
-
 call plug#begin('~/.vim/plugged')
   " file management and movement
   Plug 'christoomey/vim-tmux-navigator'
@@ -285,3 +281,7 @@ call plug#end()
 colorscheme gruvbox
 hi Normal guibg=NONE ctermbg=NONE
 hi clear SignColumn
+
+lua <<EOF
+  require('auto-dark-mode').setup()
+EOF
