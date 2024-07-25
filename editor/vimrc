@@ -138,7 +138,7 @@ autocmd BufWritePre *.rb :%s/\s\+$//e
 
 " VimTrick to close all open buffers except current
 " https://www.getrevue.co/profile/vim_tricks/issues/closing-hidden-buffers-1171538
-command Bd :up | %bd | e#
+command Bd :up | %bd! | e#
 
 " vim-test shortcuts
 " run tests in current buffer. If there are no tests, run last test again
