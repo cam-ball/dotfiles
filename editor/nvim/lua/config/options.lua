@@ -19,4 +19,8 @@ vim.cmd("hi ColorColumn ctermbg=235 guibg=#2c2d27")
 vim.cmd("iabbrev recieve receive")
 vim.cmd("iabbrev cab@ Co-authored-by: NAME <NAME@example.com><Esc>BBciw")
 
+-- delete all buffers but current
 vim.api.nvim_create_user_command("Bd", ":up | %bd! | e#", {})
+
+-- clipboard support
+vim.opt.clipboard:append("unnamedplus")
