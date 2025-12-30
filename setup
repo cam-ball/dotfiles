@@ -4,21 +4,21 @@
 # in ~/dotfiles
 ############################
 
-dir=~/dotfiles                            # dotfiles directory
-olddir=~/dotfiles_old                     # old dotfiles backup directory
-dotfile_dirs="shell git editor terminal"  # directories containing dotfiles to link to $HOME
-home_bin=$HOME/bin                        # directory for executables stored in this repository
-nvim_config=$HOME/.config/nvim            # directory for neovim configurations
+dir=~/dotfiles                           # dotfiles directory
+olddir=~/dotfiles_old                    # old dotfiles backup directory
+dotfile_dirs="shell git editor terminal" # directories containing dotfiles to link to $HOME
+home_bin=$HOME/bin                       # directory for executables stored in this repository
+nvim_parent_dir=$HOME/.config            # directory for neovim configurations
 
 while getopts "x" option; do
   case ${option} in
-    x )
-      script_only=1
-      ;;
-    \? ) #For invalid option
-      echo "Invalid argument provided"
-      exit 1
-      ;;
+  x)
+    script_only=1
+    ;;
+  \?) #For invalid option
+    echo "Invalid argument provided"
+    exit 1
+    ;;
   esac
 done
 
@@ -41,12 +41,8 @@ if [ -z "${script_only+x}" ]; then
     done
   done
 
-  # create nvim config directory if it doesn't exist, and symlink new vimrc
-  mkdir -p $nvim_config
-  ln -s -f $dir/editor/vimrc $nvim_config/init.vim
-
-  # symlink spellfile dir
-  ln -s -f $dir/editor/spell $nvim_config
+  # symlink nvim configurations
+  ln -s -f $dir/editor/nvim $nvim_parent_dir
 
   echo "Moved all existing dotfiles to $olddir."
 fi
@@ -60,6 +56,5 @@ for file in $dir/scripts/*; do
     ln -s -f $file $home_bin/$scriptname
   fi
 done
-
 
 echo "Complete"
