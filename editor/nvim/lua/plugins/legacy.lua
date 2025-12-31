@@ -2,11 +2,12 @@
 return {
   {
     "tpope/vim-rails",
+    lazy = false,
     keys = {
-      --   { "<localleader>a", ":A<cr>", { desc = "Open alternate in current buffer", remap = true } },
+      { "<localleader>a", ":A<cr>", { desc = "Open alternate in current buffer", remap = true } },
       { "<localleader>av", ":AV<cr>", { desc = "Open alternate in new vertical split", remap = true } },
-      --   { "<localleader>as", ":AS<cr>", { desc = "Open alternate in new horizontal split", remap = true } },
-      --   { "<localleader>at", ":AT<cr>", { desc = "Open alternate in new tab", remap = true } },
+      { "<localleader>as", ":AS<cr>", { desc = "Open alternate in new horizontal split", remap = true } },
+      { "<localleader>at", ":AT<cr>", { desc = "Open alternate in new tab", remap = true } },
     },
   },
   { "mechatroner/rainbow_csv" },
