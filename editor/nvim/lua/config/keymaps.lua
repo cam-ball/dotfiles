@@ -11,3 +11,8 @@ vim.keymap.del({ "n", "i", "v" }, "<A-k>")
 
 -- copy filepath
 vim.keymap.set("n", "<leader>p", ':let @+=expand("%")<CR>', { desc = "Copy current relative filepath", remap = true })
+
+-- disable > and < maps for indenting, re-enables repeatable motion with .
+-- https://github.com/LazyVim/LazyVim/discussions/1239
+vim.keymap.set("v", "<", "<")
+vim.keymap.set("v", ">", ">")
