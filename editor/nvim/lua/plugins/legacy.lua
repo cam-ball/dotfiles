@@ -12,6 +12,7 @@ return {
   },
   { "mechatroner/rainbow_csv" },
   { "RRethy/nvim-treesitter-endwise" },
+  { "tpope/vim-endwise" },
   -- { "kana/vim-textobj-user" },
   -- { "nelstrom/vim-textobj-rubyblock" },
   { "AndrewRadev/splitjoin.vim" },
