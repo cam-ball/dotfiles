@@ -7,6 +7,8 @@ vim.g.maplocalleader = ","
 vim.cmd("set ignorecase")
 vim.cmd("set smartcase")
 
+vim.cmd("set noswapfile")
+
 vim.opt.number = true
 vim.opt.relativenumber = false
 

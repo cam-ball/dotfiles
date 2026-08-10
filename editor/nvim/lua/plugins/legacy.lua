@@ -17,6 +17,7 @@ return {
   -- { "nelstrom/vim-textobj-rubyblock" },
   { "AndrewRadev/splitjoin.vim" },
   { "tpope/vim-surround" },
+  { "tpope/vim-endwise" },
   { "tpope/vim-abolish" },
   { "junegunn/fzf" },
   { "junegunn/fzf.vim" },
