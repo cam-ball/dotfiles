@@ -6,13 +6,11 @@ return {
       --   virtual_text = true,
       -- },
       servers = {
-        rubocop = {
-          mason = false,
-          cmd = { "bundle", "exec", "rubocop", "--lsp" },
-        },
         ruby_lsp = {
           mason = false,
-          cmd = { vim.fn.expand("~/.asdf/shims/ruby-lsp") },
+          reuse_client = function(client, config)
+            return client.config.root_dir == config.root_dir
+          end,
         },
       },
     },
